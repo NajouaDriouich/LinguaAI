@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linguistics AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"/>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <aside>
+        <div class="logo">
+            <img src="logo.jpeg" alt="logo LinguaAI">
+            <span>LinguaAI</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" data-target="sec-Home" class="active">
+                    <i class="fa-regular fa-house"></i>
+                    <span>Home</span></a>
+                </li>
+                <li><a href="#historique" data-target="sec-historique">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>historique</span>
+                    </a>
+                </li>
+                <li><a href="#grammar" data-target="sec-grammar">
+                    <i class="fa-solid fa-spell-check"></i>
+                    <span>Grammar</span></a></li>
+                <li><a href="#vocabulary" data-target="sec-Vocabulary">
+                    <i class="fa-solid fa-language"></i>
+                    <span>Vocabulary</span></a></li>
+                <li><a href="#settings" data-target="sec-settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span></a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <header>
+            <div>
+                
+                <button type="button" id="notifBtn" title="Notifications">
+                    <i class="fa-regular fa-bell"></i>
+                </button>
+                <button type="button" id="userBtn" title="Mon compte">
+                    <i class="fa-regular fa-user"></i>
+                </button>
+                <span id="headerName">Oussama Zegani </span>
+            </div>
+        </header>
+        <section id="sec-Home" class="active-section">
+            <h1>welcome back , <span id="userName">oussama</span></h1>
+            <p>what language would you like to discover today?</p>
+
+            <div class="chat-messages" id="chatMessages" aria-live="polite"></div>
+            <div class="attach-preview" id="attachPreview" hidden></div>
+
+            <form id="chatForm" action="#" method="post" autocomplete="off">
+                <button type="button" id="newChatIcon" title="Nouvelle discussion"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles preview-icon"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></button>
+                <input type="text" id="Linguistics" placeholder="ask me anything........">
+                <button type="button" id="attachBtn" title="Joindre un fichier"><i class="fa-solid fa-paperclip"></i></button>
+                <button type="button" id="imageBtn" title="Ajouter une image"><i class="fa-regular fa-images"></i></button>
+                <button type="submit" class="btn-send" id="sendBtn" title="Envoyer"><i class="fa-solid fa-arrow-right-long"></i></button>
+
+            </form>
+        </section>
+        <section id="sec-grammar" class="content-section">
+            <!-- Header Section (Icon + Title + Description) -->
+            <div class="section-header">
+                <div class="header-icon-box">
+                    <i class="fa-solid fa-spell-check"></i>
+                </div>
+                <div class="header-text">
+                    <h2>Grammar</h2>
+                    <p>Améliorez votre grammaire avec des règles claires et des exercices pratiques.</p>
+                </div>
+            </div>
+
+            <!-- Filter Pills / Tabs -->
+            <div class="filter-tabs">
+                <button class="tab-btn active">Tout</button>
+                <button class="tab-btn">Règles</button>
+                <button class="tab-btn">Exercices</button>
+                <button class="tab-btn">Conjugaison</button>
+                <button class="tab-btn">Conseils</button>
+            </div>
+
+            <!-- Grid of Cards -->
+            <div class="cards-grid">
+                <!-- Card 1 -->
+                <div class="feature-card">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                    </div>
+                    <h3>Règles fondamentales</h3>
+                    <p>Apprenez les bases de la grammaire étape par étape.</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link">Commencer →</a>
+                        <button class="circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </div>
+                    </div>
+                    <h3>Exercices pratiques</h3>
+                    <p>Testez vos connaissances avec des quiz interactifs.</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link">Commencer →</a>
+                        <button class="circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                    </div>
+                    <h3>Conjugaison & Temps</h3>
+                    <p>Maîtrisez les verbes et les différents temps.</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link">Explorer →</a>
+                        <button class="circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="feature-card">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                    </div>
+                    <h3>Conseils & Astuces</h3>
+                    <p>Évitez les erreurs fréquentes en grammaire.</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link">Lire →</a>
+                        <button class="circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sec-Vocabulary" class="content-section">
+            <div class="section-header">
+                <div class="header-icon-box">
+                    <span>Aa</span>
+                </div>
+                <div class="header-text">
+                    <h2>Vocabulaire</h2>
+                    <p>Découvrez, apprenez et enrichissez votre vocabulaire.</p>
+                </div>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="tab-btn active">Tout</button>
+                <button class="tab-btn">Mots</button>
+                <button class="tab-btn">Expressions</button>
+                <button class="tab-btn">Thèmes</button>
+            </div>
+
+            <div class="cards-grid">
+                <div class="feature-card">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                    </div>
+                    <h3>Mots utiles</h3>
+                    <p>Apprenez les mots les plus courants.</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link">Explorer →</a>
+                        <button class="circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <h3>Expressions</h3>
+                    <p>Découvrez des expressions utiles.</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link">Explorer →</a>
+                        <button class="circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+                    </div>
+                    <h3>Par thèmes</h3>
+                    <p>Explorez le vocabulaire par thème.</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link">Explorer →</a>
+                        <button class="circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="card-top">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                    </div>
+                    <h3>Quiz de vocabulaire</h3>
+                    <p>Testez vos connaissances.</p>
+                    <div class="card-footer">
+                        <a href="#" class="btn-link">Commencer →</a>
+                        <button class="circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sec-settings" class="content-section">
+            <div class="section-header">
+                <div class="header-icon-box">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <div class="header-text">
+                    <h2>Settings</h2>
+                    <p>Personnalisez votre expérience.</p>
+                </div>
+            </div>
+
+            <!-- Profil -->
+            <div class="settings-card">
+                <div class="profile-top">
+                    <div>
+                        <div class="settings-info">
+                            <i class="fa-regular fa-user"></i>
+                            <div>
+                                <h3>Profil</h3>
+                                <p>Gérez vos informations personnelles.</p>
+                            </div>
+                        </div>
+                        <div class="profile-fields">
+                            <label for="username">Nom d'utilisateur</label>
+                            <input type="text" id="username" value="oussama.zegani@uit.ac.ma" placeholder="Your email...">
+                        </div>
+                    </div>
+                    <div class="profile-avatar">
+                        <div class="avatar-circle" id="settingsAvatar">
+                            <i class="fa-solid fa-user"></i>
+                            <button type="button" class="avatar-edit" id="avatarEditBtn" title="Changer la photo"><i class="fa-solid fa-pen"></i></button>
+                        </div>
+                        <button type="button" class="btn-outline" id="editInfoBtn">modifier votre informations</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apparence -->
+            <div class="settings-card settings-row">
+                <div class="settings-info">
+                    <i class="fa-solid fa-palette"></i>
+                    <div>
+                        <h3>Apparence</h3>
+                        <p>Choisissez votre thème préféré.</p>
+                    </div>
+                </div>
+                <div class="theme-options">
+                    <button type="button" class="theme-btn" data-theme="light"><i class="fa-regular fa-sun"></i> Clair</button>
+                    <button type="button" class="theme-btn" data-theme="dark"><i class="fa-regular fa-moon"></i> Sombre</button>
+                    <button type="button" class="theme-btn" data-theme="auto"><i class="fa-solid fa-desktop"></i> Automatique</button>
+                </div>
+            </div>
+
+            <!-- Langue -->
+            <div class="settings-card settings-row">
+                <div class="settings-info">
+                    <i class="fa-solid fa-globe"></i>
+                    <div>
+                        <h3>Langue</h3>
+                        <p>Sélectionnez la langue de l'interface.</p>
+                    </div>
+                </div>
+                <select class="lang-select" id="langSelect">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+
+            <!-- Notifications -->
+            <div class="settings-card settings-row">
+                <div class="settings-info">
+                    <i class="fa-regular fa-bell"></i>
+                    <div>
+                        <h3>Notifications</h3>
+                        <p>Gérez vos notifications.</p>
+                    </div>
+                </div>
+                <div class="notif-controls">
+                    <label class="switch">
+                        <input type="checkbox" id="notifSwitch" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <label class="notif-check">
+                        <input type="checkbox" id="notifUpdates" checked>
+                        Recevoir des mises à jour
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-historique" class="content-section">
+            <div class="section-header">
+                <div class="header-icon-box">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <div class="header-text">
+                    <h2>Historique</h2>
+                    <p>Retrouvez toutes vos conversations.</p>
+                </div>
+                <button type="button" class="btn-outline" id="newChatBtn">+ Nouvelle discussion</button>
+            </div>
+            <ul class="history-list" id="historyList"></ul>
+        </section>
+
+    </main>
+
+    <!-- Modal compte -->
+    <div class="modal-overlay" id="authModal" aria-hidden="true">
+        <div class="modal" role="dialog" aria-modal="true">
+            <button type="button" class="modal-close" id="modalClose" title="Fermer"><i class="fa-solid fa-xmark"></i></button>
+
+            <div id="authView">
+                <h2 id="authTitle">Connexion</h2>
+                <p class="modal-sub">Connectez-vous pour retrouver vos conversations.</p>
+                <div class="auth-tabs" id="authTabs">
+                    <button type="button" class="tab-btn active" data-mode="login">Connexion</button>
+                    <button type="button" class="tab-btn" data-mode="signup">Créer un compte</button>
+                </div>
+                <form id="authForm" novalidate>
+                    <div id="signupFields" hidden>
+                        <div class="field-row">
+                            <label>Prénom
+                                <input type="text" id="authPrenom" placeholder="Prénom" autocomplete="given-name">
+                            </label>
+                            <label>Nom
+                                <input type="text" id="authNom" placeholder="Nom" autocomplete="family-name">
+                            </label>
+                        </div>
+                        <label>Date de naissance
+                            <input type="date" id="authBirth" autocomplete="bday">
+                        </label>
+                    </div>
+                    <label>Email
+                        <input type="email" id="authEmail" placeholder="vous@exemple.com" autocomplete="email">
+                    </label>
+                    <label>Mot de passe
+                        <input type="password" id="authPass" placeholder="6 caractères minimum" autocomplete="current-password">
+                    </label>
+                    <div class="auth-error" id="authError"></div>
+                    <button type="submit" class="btn-primary" id="authSubmit">Se connecter</button>
+                </form>
+            </div>
+
+            <div class="user-view" id="userView" hidden>
+                <div class="avatar-circle" id="modalAvatar"><i class="fa-solid fa-user"></i></div>
+                <h2>Mon compte</h2>
+                <p class="modal-sub">Modifiez vos informations personnelles.</p>
+                <div class="field-row">
+                    <label>Prénom
+                        <input type="text" id="profilePrenom" autocomplete="given-name">
+                    </label>
+                    <label>Nom
+                        <input type="text" id="profileNom" autocomplete="family-name">
+                    </label>
+                </div>
+                <label>Date de naissance
+                    <input type="date" id="profileBirth" autocomplete="bday">
+                </label>
+                <label>Email
+                    <input type="email" id="profileEmail" autocomplete="email">
+                </label>
+                <label>Nouveau mot de passe (facultatif)
+                    <input type="password" id="profilePass" placeholder="Laisser vide pour ne pas changer" autocomplete="new-password">
+                </label>
+                <div class="user-actions">
+                    <button type="button" class="btn-outline" id="saveProfileBtn">Enregistrer</button>
+                    <button type="button" class="btn-outline" id="logoutBtn">Déconnexion</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <input type="file" id="fileInput" hidden>
+    <input type="file" id="imageInput" accept="image/*" hidden>
+    <input type="file" id="avatarInput" accept="image/*" hidden>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
